@@ -7,6 +7,6 @@ setuptools.setup(
     packages=['lol', ],
     author='brianperrett',
     author_email='perrettbrian@gmail.com',
-    description='riot api wrapper',
+    description='Riot API Wrapper',
     long_description=open('README.md').read(), 
-    )
+)
