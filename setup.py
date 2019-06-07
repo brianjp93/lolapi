@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name='lol',
-    version='0.1dev',
+    version='1.0',
     packages=['lol', ],
     author='brianperrett',
     author_email='perrettbrian@gmail.com',
