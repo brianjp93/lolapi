@@ -2,7 +2,7 @@ import setuptools
 
 
 setuptools.setup(
-    name='lolapi',
+    name='lolwrapper',
     version='1.0',
     packages=setuptools.find_packages(),
     author='Brian Perrett',
