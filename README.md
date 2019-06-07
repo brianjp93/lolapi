@@ -1,6 +1,7 @@
 # League of Legends API Wrapper
 
-lolwrapper is a python wrapper for the Riot League of Legends API endpoints.
+**lolwrapper** is a Python wrapper for the Riot League of Legends API endpoints.
+**lolwrapper** works with Python >= 3.6
 
 # Installation
 
