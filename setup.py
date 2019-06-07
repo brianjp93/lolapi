@@ -9,5 +9,6 @@ setuptools.setup(
     author_email='perrettbrian@gmail.com',
     description='Riot API Wrapper',
     long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     url="https://github.com/brianjp93/lolapi",
 )
