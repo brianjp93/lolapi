@@ -3,3 +3,6 @@ lol/.ipynb_checkpoints/*
 __pycache__/*
 *.pyc
 .DS_Store
+build/
+dist/
+lolapi.egg-info/
