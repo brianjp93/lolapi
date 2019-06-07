@@ -9,8 +9,9 @@ with open(path.join(BASE, 'README.md'), encoding='utf-8') as f:
 
 setuptools.setup(
     name='lolwrapper',
-    version='1.0',
+    version='1.01',
     packages=setuptools.find_packages(),
+    install_requires=['requests',],
     author='Brian Perrett',
     author_email='perrettbrian@gmail.com',
     description='Riot API Wrapper',
