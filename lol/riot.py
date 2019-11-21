@@ -60,3 +60,6 @@ class Riot:
         self.spectator = resource.Spectator(self.base)
         self.summoner = resource.Summoner(self.base)
         self.thirdpartycode = resource.ThirdPartyCode(self.base)
+        self.tftleague = resource.TftLeague(self.base)
+        self.tftmatch = resource.TftMatch(self.base)
+        self.tftsummoner = resource.TftSummoner(self.base)
