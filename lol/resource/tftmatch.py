@@ -35,12 +35,12 @@ class TftMatch():
         base_url = f'https://{selected_region}.api.riotgames.com/tft/match'
         return base_url
 
-    def get(self, _id):
+    def get(self, _id, region=None, general_region=None):
         base_url = self.get_base_url(region=region, general_region=general_region)
         url = f'{base_url}/{self.version}/matches/{_id}'
         return requests.get(url, headers=self.base.headers)
 
     def list_by_puuid(self, puuid, region=None, general_region=None):
         base_url = self.get_base_url(region=region, general_region=general_region)
-        url = f'{base_url}/{self.version}/by-puuid/{puuid}/ids'
+        url = f'{base_url}/{self.version}/matches/by-puuid/{puuid}/ids'
         return requests.get(url, headers=self.base.headers)

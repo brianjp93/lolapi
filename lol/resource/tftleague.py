@@ -3,7 +3,7 @@ import requests
 
 class TftLeague():
 
-    def __init__(self, base, region):
+    def __init__(self, base):
         self.base = base
         self.version = 'v1'
 
@@ -16,6 +16,21 @@ class TftLeague():
         return requests.get(base_url, headers=self.base.headers)
 
     def entries(self, tier, division, region):
+        """
+
+        Parameters
+        ----------
+        tier : str
+            enum[IRON, BRONZE, SILVER, GOLD, PLATINUM, DIAMOND]
+        division : str
+            enum[I, II, III, IV]
+        region : str
+
+        Returns
+        -------
+        list
+
+        """
         base_url = f'{self.base.base_url[region]}/tft/league/{self.version}/entries/{tier}/{division}'
         return requests.get(base_url, headers=self.base.headers)
 
