@@ -38,9 +38,9 @@ class TftMatch():
     def get(self, _id):
         base_url = self.get_base_url(region=region, general_region=general_region)
         url = f'{base_url}/{self.version}/matches/{_id}'
-        requests.get(url, headers=self.base.headers)
+        return requests.get(url, headers=self.base.headers)
 
     def list_by_puuid(self, puuid, region=None, general_region=None):
         base_url = self.get_base_url(region=region, general_region=general_region)
         url = f'{base_url}/{self.version}/by-puuid/{puuid}/ids'
-        requests.get(url, headers=self.base.headers)
+        return requests.get(url, headers=self.base.headers)

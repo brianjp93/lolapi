@@ -12,3 +12,6 @@ from .runes import Runes
 from .spectator import Spectator
 from .summoner import Summoner
 from .thirdpartycode import ThirdPartyCode
+from .tftleague import TftLeague
+from .tftmatch import TftMatch
+from .tftsummoner import TftSummoner
