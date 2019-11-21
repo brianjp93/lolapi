@@ -31,6 +31,9 @@ $ pip install lolwrapper
 >>> api.spectator
 >>> api.summoner
 >>> api.thirdpartycode
+>>> api.tftleague
+>>> api.tftmatch
+>>> api.tftsummoner
 ```
 
 ### Get a summoner
