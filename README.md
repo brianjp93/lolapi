@@ -29,7 +29,6 @@ $ pip install lolwrapper
 >>> api.lolstatus
 >>> api.masteries
 >>> api.match
->>> api.runes
 >>> api.spectator
 >>> api.summoner
 >>> api.thirdpartycode
