@@ -1,3 +1,5 @@
+![Coverage Badge](./coverage.svg)
+
 # League of Legends API Wrapper
 
 **lolwrapper** is a Python wrapper for the Riot League of Legends API endpoints.
@@ -59,4 +61,9 @@ Tests can be run using just pytest
 Or with coverage
 ```
 >>> pytest --cov=lol ./
+```
+
+Add coverage badge with
+```
+>>> coverage-badge
 ```
