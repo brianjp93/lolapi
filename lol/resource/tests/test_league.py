@@ -25,3 +25,7 @@ def test_entries():
 
     r = api.league.entries(data['id'], region='na')
     assert r.status_code == 200
+
+def test_entries_list():
+    r = api.league.entries_list('RANKED_SOLO_5x5', 'DIAMOND', 'I', region='na')
+    assert r.status_code == 200

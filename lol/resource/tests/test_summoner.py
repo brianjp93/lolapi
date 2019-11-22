@@ -1,6 +1,8 @@
 """Testing file for resource.summoner
 """
 import os
+import pytest
+
 from ...riot import Riot
 
 KEY = os.environ.get('RIOT_API_KEY')
@@ -25,3 +27,6 @@ def test_get():
     r = api.summoner.get(encrypted_puuid=data['puuid'], region='na')
     assert r.status_code == 200
 
+    with pytest.raises(Exception) as info:
+        r = api.summoner.get(region='na')
+    assert 'must be provided' in str(info.value)
