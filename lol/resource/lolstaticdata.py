@@ -33,13 +33,6 @@ class LolStaticData:
         r = requests.get(url)
         return r
 
-    def masteries(self, version='', language='en_US'):
-        """Masteries list.
-        """
-        url = f'{self.base}/cdn/{version}/data/{language}/mastery.json '
-        r = requests.get(url)
-        return r
-
     def profile_icons(self, version='', language='en_US'):
         """Retrieve profile icons.
         """
@@ -62,24 +55,7 @@ class LolStaticData:
         Response
 
         """
-        url = f'{self.base}/realms/{self.region}.json'
-        r = requests.get(url)
-        return r
-
-    def runes(self, version='', language='en_US'):
-        """Get all rune data.
-
-        Parameters
-        ----------
-        version : str
-        language : str
-
-        Returns
-        -------
-        Response
-
-        """
-        url = f'{self.base}/cdn/{version}/data/{language}/rune.json'
+        url = f'{self.base}/realms/{region}.json'
         r = requests.get(url)
         return r
 

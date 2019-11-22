@@ -13,28 +13,29 @@ def test_champions():
     assert r.status_code == 200
 
 def test_items():
-    pass
+    r = api.lolstaticdata.items(version=VERSION)
+    assert r.status_code == 200
 
 def test_languages():
-    pass
-
-def test_masteries():
-    pass
+    r = api.lolstaticdata.languages()
+    assert r.status_code == 200
 
 def test_profile_icons():
-    pass
+    r = api.lolstaticdata.profile_icons(version=VERSION)
+    assert r.status_code == 200
 
 def test_realms():
-    pass
-
-def test_runes():
-    pass
+    r = api.lolstaticdata.realms(region='na')
+    assert r.status_code == 200
 
 def test_runes_reforged():
-    pass
+    r = api.lolstaticdata.runes_reforged(version=VERSION)
+    assert r.status_code == 200
 
 def test_summoner_spells():
-    pass
+    r = api.lolstaticdata.summoner_spells(version=VERSION)
+    assert r.status_code == 200
 
 def test_versions():
-    pass
+    r = api.lolstaticdata.versions()
+    assert r.status_code == 200
