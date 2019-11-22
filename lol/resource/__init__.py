@@ -8,7 +8,6 @@ from .lolstaticdata import LolStaticData
 from .lolstatus import LolStatus
 from .masteries import Masteries
 from .match import Match
-from .runes import Runes
 from .spectator import Spectator
 from .summoner import Summoner
 from .thirdpartycode import ThirdPartyCode

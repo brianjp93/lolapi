@@ -57,7 +57,6 @@ class Riot:
         self.lolstatus = resource.LolStatus(self.base)
         self.masteries = resource.Masteries(self.base)
         self.match = resource.Match(self.base)
-        self.runes = resource.Runes(self.base)
         self.spectator = resource.Spectator(self.base)
         self.summoner = resource.Summoner(self.base)
         self.thirdpartycode = resource.ThirdPartyCode(self.base)
