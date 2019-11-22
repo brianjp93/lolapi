@@ -12,6 +12,10 @@ def test_champions():
     r = api.lolstaticdata.champions(version=VERSION)
     assert r.status_code == 200
 
+def test_get_single_champion():
+    r = api.lolstaticdata.champions(name='Tristana', version=VERSION)
+    assert r.status_code == 200
+
 def test_items():
     r = api.lolstaticdata.items(version=VERSION)
     assert r.status_code == 200
