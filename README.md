@@ -47,3 +47,16 @@ $ pip install lolwrapper
 >>> r.json()
 ```
 
+# Testing
+
+Testing requires `pytest-cov`, `pytest`, and `coverage`
+
+Tests can be run using just pytest
+```
+>>> pytest
+```
+
+Or with coverage
+```
+>>> pytest --cov=lol ./
+```
