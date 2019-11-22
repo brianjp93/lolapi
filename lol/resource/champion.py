@@ -9,20 +9,10 @@ class Champion:
     def __init__(self, base):
         self.base = base
 
-    def all(self, region=None):
-        """
-        Retrieve all champions
-        """
-        base_url = self.base.base_url[region]
-        url = '{}/lol/platform/v3/champions'.format(base_url)
-        r = requests.get(url, headers=self.base.headers)
-        return r
-
-    def get(self, champion_id, region=None):
-        """
-        Retrieve champion by ID
+    def rotations(self, region=None):
+        """Get list of Champion Rotations.
         """
         base_url = self.base.base_url[region]
-        url = '{}/lol/platform/v3/champions/{}'.format(base_url, champion_id)
+        url = '{}/lol/platform/v3/champion-rotations'.format(base_url)
         r = requests.get(url, headers=self.base.headers)
         return r

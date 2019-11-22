@@ -33,6 +33,8 @@ class Summoner():
             url = f'{base_url}/lol/summoner/{self.version}/summoners/by-account/{encrypted_account_id}'.format(base_url, encrypted_account_id)
         elif encrypted_summoner_id is not None:
             url = f'{base_url}/lol/summoner/{self.version}/summoners/{encrypted_summoner_id}'
+        elif encrypted_puuid is not None:
+            url = f'{base_url}/lol/summoner/{self.version}/summoners/by-puuid/{encrypted_puuid}'
         else:
             raise Exception('One of [name, encrypted_account_id, encrypted_summoner_id, encrypted_puuid] must be provided')
         r = requests.get(url, headers=self.base.headers)

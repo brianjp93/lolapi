@@ -21,7 +21,7 @@ class League:
         ----------
         queue : str
             enum(
-                RANKED_SOLO_5X5,
+                RANKED_SOLO_5x5,
                 RANKED_FLEX_SR,
                 RANKED_FLEX_TT
             )
@@ -44,7 +44,7 @@ class League:
         ----------
         queue : str
             enum(
-                RANKED_SOLO_5X5,
+                RANKED_SOLO_5x5,
                 RANKED_FLEX_SR,
                 RANKED_FLEX_TT
             )
@@ -67,7 +67,7 @@ class League:
         ----------
         queue : str
             enum(
-                RANKED_SOLO_5X5,
+                RANKED_SOLO_5x5,
                 RANKED_FLEX_SR,
                 RANKED_FLEX_TT
             )
