@@ -17,7 +17,7 @@ class RiotBase:
         'br': 'https://br1.api.riotgames.com',
         'eune': 'https://eun1.api.riotgames.com',
         'euw': 'https://euw1.api.riotgames.com',
-        'jp': 'https://jp1.api.riotgames.com', 
+        'jp': 'https://jp1.api.riotgames.com',
         'kr': 'https://kr.api.riotgames.com',
         'lan': 'https://la1.api.riotgames.com',
         'las': 'https://la2.api.riotgames.com',
@@ -63,3 +63,4 @@ class Riot:
         self.tftleague = resource.TftLeague(self.base)
         self.tftmatch = resource.TftMatch(self.base)
         self.tftsummoner = resource.TftSummoner(self.base)
+        self.pro = resource.Pro(self.base)
