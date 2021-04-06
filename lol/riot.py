@@ -15,17 +15,40 @@ class RiotBase:
 
     base_url = {
         'br': 'https://br1.api.riotgames.com',
+        'br1': 'https://br1.api.riotgames.com',
+
         'eune': 'https://eun1.api.riotgames.com',
+        'eun': 'https://eun1.api.riotgames.com',
+        'eun1': 'https://eun1.api.riotgames.com',
+
         'euw': 'https://euw1.api.riotgames.com',
+        'euw1': 'https://euw1.api.riotgames.com',
+
         'jp': 'https://jp1.api.riotgames.com',
+        'jp1': 'https://jp1.api.riotgames.com',
+
         'kr': 'https://kr.api.riotgames.com',
+        'kr1': 'https://kr.api.riotgames.com',
+
         'lan': 'https://la1.api.riotgames.com',
+        'la1': 'https://la1.api.riotgames.com',
+
         'las': 'https://la2.api.riotgames.com',
+        'la2': 'https://la2.api.riotgames.com',
+
         'na': 'https://na1.api.riotgames.com',
+        'na1': 'https://na1.api.riotgames.com',
+
         'oce': 'https://oc1.api.riotgames.com',
+        'oc1': 'https://oc1.api.riotgames.com',
+
         'tr': 'https://tr1.api.riotgames.com',
+        'tr1': 'https://tr1.api.riotgames.com',
+
         'ru': 'https://ru.api.riotgames.com',
+
         'pbe': 'https://pbe1.api.riotgames.com',
+        'pbe1': 'https://pbe1.api.riotgames.com',
     }
 
     def __init__(self, key):
