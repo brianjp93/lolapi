@@ -1,10 +1,15 @@
-import requests
-
 import sys
 import os
 
 PACKAGE_PARENT = '..'
-SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+SCRIPT_DIR = os.path.dirname(
+    os.path.realpath(
+        os.path.join(
+            os.getcwd(),
+            os.path.expanduser(__file__)
+        )
+    )
+)
 package_path = os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT))
 sys.path.append(package_path)
 
@@ -49,6 +54,16 @@ class RiotBase:
 
         'pbe': 'https://pbe1.api.riotgames.com',
         'pbe1': 'https://pbe1.api.riotgames.com',
+
+        'americas': 'https://americas.api.riotgames.com',
+        'europe': 'https://europe.api.riotgames.com',
+        'asia': 'https://asia.api.riotgames.com',
+    }
+
+    routes = {
+        'americas': {'na', 'na1', 'br', 'br1', 'lan', 'la1', 'las', 'la2', 'oce', 'oc1'},
+        'europe': {'eune', 'eun', 'eun1', 'euw', 'euw1', 'tr', 'tr1', 'ru'},
+        'asia': {'kr', 'kr1', 'jp', 'jp1'},
     }
 
     def __init__(self, key):
@@ -63,12 +78,15 @@ class RiotBase:
         }
         return headers
 
+    def get_base_url(self, region: str, use_v5_region=False):
+        if use_v5_region:
+            for new_region, val in self.routes.items():
+                if region in val:
+                    return self.base_url[new_region]
+        return self.base_url[region]
+
 
 class Riot:
-    """
-    using V4 endpoints whenever possible
-    """
-
     def __init__(self, key):
         self.key = key
         self.base = RiotBase(key)

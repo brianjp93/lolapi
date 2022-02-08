@@ -8,6 +8,7 @@ api = Riot(KEY)
 
 match_ids = []
 
+
 def get_match_ids():
     global match_ids
     if match_ids:
@@ -15,28 +16,27 @@ def get_match_ids():
     else:
         r = api.summoner.get(name='importantigrvty', region='na')
         data = r.json()
-
-        r = api.match.filter(data['accountId'], region='na')
-        for x in r.json()['matches']:
-            match_ids.append(x['gameId'])
+        response = api.match.filter(data['puuid'], region='na')
+        for x in response.json():
+            match_ids.append(x)
     return match_ids
+
 
 def test_get():
     match_ids = get_match_ids()
-    r = api.match.get(match_ids[0], region='na')
-    assert r.status_code == 200
+    response = api.match.get(match_ids[0], region='na')
+    assert response.status_code == 200
+
 
 def test_filter():
     r = api.summoner.get(name='importantigrvty', region='na')
     data = r.json()
 
-    r = api.match.filter(data['accountId'], region='na')
+    r = api.match.filter(data['puuid'], region='na')
     assert r.status_code == 200
+
 
 def test_timeline():
     match_id = get_match_ids()[0]
     r = api.match.timeline(match_id, region='na')
     assert r.status_code == 200
-
-def test_tournament_all():
-    pass
