@@ -15,3 +15,4 @@ from .tftleague import TftLeague
 from .tftmatch import TftMatch
 from .tftsummoner import TftSummoner
 from .proplay import Pro
+from .account import Account

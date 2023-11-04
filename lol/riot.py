@@ -91,6 +91,7 @@ class Riot:
         self.key = key
         self.base = RiotBase(key)
 
+        self.account = resource.Account(self.base)
         self.champion = resource.Champion(self.base)
         self.championmastery = resource.ChampionMastery(self.base)
         self.league = resource.League(self.base)
