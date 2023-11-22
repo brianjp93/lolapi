@@ -9,7 +9,7 @@ with open(path.join(BASE, 'README.md'), encoding='utf-8') as f:
 
 setuptools.setup(
     name='lolwrapper',
-    version='1.6.2',
+    version='1.7.0',
     packages=setuptools.find_packages(),
     install_requires=['requests', ],
     python_requires='>=3.6',
