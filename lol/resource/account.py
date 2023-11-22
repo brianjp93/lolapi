@@ -12,7 +12,7 @@ class Account:
     def by_riot_id(self, game_name, tag_line, region='americas'):
         """Get list of Champion Rotations.
         """
-        base_url = self.base.base_url[region]
+        base_url = self.base.get_base_url(region, use_v5_region=True)
         url = '{}/riot/account/v1/accounts/by-riot-id/{}/{}'.format(base_url, game_name, tag_line)
         r = requests.get(url, headers=self.base.headers)
         return r
