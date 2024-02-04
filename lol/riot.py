@@ -65,7 +65,7 @@ class RiotBase:
         'americas': {'na', 'na1', 'br', 'br1', 'lan', 'la1', 'las', 'la2'},
         'europe': {'eune', 'eun', 'eun1', 'euw', 'euw1', 'tr', 'tr1', 'ru'},
         'asia': {'kr', 'kr1', 'jp', 'jp1'},
-        'sea': {'oce', 'ph2', 'sg2', 'th2', 'tw2', 'vn2'},
+        'sea': {'oce', 'ph2', 'sg2', 'th2', 'tw2', 'vn2', 'oc1'},
     }
 
     def __init__(self, key):
