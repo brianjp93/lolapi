@@ -58,12 +58,14 @@ class RiotBase:
         'americas': 'https://americas.api.riotgames.com',
         'europe': 'https://europe.api.riotgames.com',
         'asia': 'https://asia.api.riotgames.com',
+        'sea': 'https://sea.api.riotgames.com',
     }
 
     routes = {
-        'americas': {'na', 'na1', 'br', 'br1', 'lan', 'la1', 'las', 'la2', 'oce', 'oc1'},
+        'americas': {'na', 'na1', 'br', 'br1', 'lan', 'la1', 'las', 'la2'},
         'europe': {'eune', 'eun', 'eun1', 'euw', 'euw1', 'tr', 'tr1', 'ru'},
         'asia': {'kr', 'kr1', 'jp', 'jp1'},
+        'sea': {'oce', 'ph2', 'sg2', 'th2', 'tw2', 'vn2'},
     }
 
     def __init__(self, key):
