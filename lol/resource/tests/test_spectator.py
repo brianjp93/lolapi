@@ -9,11 +9,9 @@ api = Riot(KEY)
 def test_get():
     r = api.spectator.featured(region='na')
     data = r.json()
-    name = data['gameList'][0]['participants'][0]['summonerName']
+    puuid = data['gameList'][0]['participants'][0]['puuid']
     
-    r = api.summoner.get(name=name, region='na')
-    data = r.json()
-    r = api.spectator.get(data['id'], region='na')
+    r = api.spectator.get(puuid, region='na')
     assert r.status_code == 200
 
 def test_featured():
