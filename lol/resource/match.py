@@ -54,10 +54,10 @@ class Match:
         base_url = self.base.get_base_url(region, use_v5_region=True)
         params = {}
         if startTime:
-            value = int(startTime.timestamp() * 1000)
+            value = int(startTime.timestamp())
             params['startTime'] = value
         if endTime:
-            value = int(endTime.timestamp() * 1000)
+            value = int(endTime.timestamp())
             params['endTime'] = value
         if queue:
             params['queue'] = queue
