@@ -119,6 +119,12 @@ class League:
         r = requests.get(url, headers=self.base.headers)
         return r
 
+    def entries_by_puuid(self, puuid: str, region=None):
+        base_url = self.base.base_url[region]
+        url = f'{base_url}/lol/league/{self.version}/entries/by-puuid/{puuid}'
+        r = requests.get(url, headers=self.base.headers)
+        return r
+
     def entries_list(self, queue, tier, division, page=1, region=None):
         """Get a page of rank entries in a queue, tier, division.
 
